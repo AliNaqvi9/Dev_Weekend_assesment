@@ -20,3 +20,4 @@ Since this project uses vanilla HTML, CSS, and JS, there is no build step or pac
 - Fully responsive layout (mobile-first approach)
 - Custom tip percentage input
 - "Never underpay" rounding policy
+<img width="993" height="715" alt="image" src="https://github.com/user-attachments/assets/01840a56-5909-403c-a606-0d0d62987972" />
