@@ -1,0 +1,197 @@
+/* =========================================
+   RESET & BASE STYLES
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+body {
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  color: #374151;
+}
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+.calculator-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile default: single column */
+  gap: 2rem;
+}
+
+h1 {
+  grid-column: 1 / -1;
+  font-size: 1.5rem;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   INPUTS SECTION
+   ========================================= */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #111827;
+  transition: border-color 0.2s ease;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Tip Buttons Grid */
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.tip-btn {
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tip-btn:hover {
+  background-color: #374151;
+}
+
+/* Visually distinct active state for the selected tip */
+.tip-btn.active {
+  background-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+/* Error Messages - Using opacity prevents layout shifting/flickering */
+.error-message {
+  color: #ef4444;
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-height: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.error-message.show {
+  opacity: 1;
+}
+
+input.input-error {
+  border-color: #ef4444;
+}
+
+/* =========================================
+   OUTPUTS SECTION
+   ========================================= */
+.outputs {
+  background-color: #111827;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-row p {
+  color: #9ca3af;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.result-row span {
+  color: #10b981; /* Green for money */
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Reset Button */
+#reset-btn {
+  width: 100%;
+  background-color: #374151;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+#reset-btn:hover {
+  background-color: #4b5563;
+}
+
+#reset-btn:active {
+  background-color: #1f2937;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Desktop / Laptop)
+   ========================================= */
+@media (min-width: 768px) {
+  .calculator-container {
+    grid-template-columns: 1fr 1fr; /* Switches to 2 columns on larger screens */
+  }
+
+  .tip-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
