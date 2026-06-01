@@ -1,6 +1,4 @@
-/* =========================================
-   RESET & BASE STYLES
-   ========================================= */
+/* reset & base styles */
 * {
   margin: 0;
   padding: 0;
@@ -20,9 +18,7 @@ body {
   color: #374151;
 }
 
-/* =========================================
-   MAIN CONTAINER
-   ========================================= */
+/* main container */
 .calculator-container {
   background-color: #ffffff;
   width: 100%;
@@ -31,7 +27,7 @@ body {
   padding: 2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   display: grid;
-  grid-template-columns: 1fr; /* Mobile default: single column */
+  grid-template-columns: 1fr; /* mobile default: single column */
   gap: 2rem;
 }
 
@@ -43,9 +39,7 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-/* =========================================
-   INPUTS SECTION
-   ========================================= */
+/* inputs section */
 .inputs {
   display: flex;
   flex-direction: column;
@@ -80,7 +74,7 @@ input[type="number"]:focus {
   border-color: #2563eb;
 }
 
-/* Tip Buttons Grid */
+/* tip buttons grid */
 .tip-buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -103,13 +97,13 @@ input[type="number"]:focus {
   background-color: #374151;
 }
 
-/* Visually distinct active state for the selected tip */
+/* visually distinct active state for the selected tip */
 .tip-btn.active {
   background-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
 }
 
-/* Error Messages - Using opacity prevents layout shifting/flickering */
+/* error messages - using opacity prevents layout shifting/flickering */
 .error-message {
   color: #ef4444;
   font-size: 0.8rem;
@@ -127,9 +121,7 @@ input.input-error {
   border-color: #ef4444;
 }
 
-/* =========================================
-   OUTPUTS SECTION
-   ========================================= */
+/* outputs section */
 .outputs {
   background-color: #111827;
   border-radius: 1rem;
@@ -153,12 +145,12 @@ input.input-error {
 }
 
 .result-row span {
-  color: #10b981; /* Green for money */
+  color: #10b981; /* green for money */
   font-size: 2rem;
   font-weight: 700;
 }
 
-/* Reset Button */
+/* reset button */
 #reset-btn {
   width: 100%;
   background-color: #374151;
@@ -183,12 +175,10 @@ input.input-error {
   background-color: #1f2937;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN (Desktop / Laptop)
-   ========================================= */
+/* responsive design (desktop / laptop) */
 @media (min-width: 768px) {
   .calculator-container {
-    grid-template-columns: 1fr 1fr; /* Switches to 2 columns on larger screens */
+    grid-template-columns: 1fr 1fr; /* switches to 2 columns on larger screens */
   }
 
   .tip-buttons {
